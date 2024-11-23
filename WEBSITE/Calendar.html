@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schoolmaster</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            height: 100vh;
+        }
+
+        #sideFrame {
+            background-color: #0b172b;
+            color: white;
+            width: 250px;
+            padding: 20px;
+        }
+
+        #sideFrame img {
+            width: 200px;
+            height: 133px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: block;
+            background-color: #FFFFFF;
+            color: #0b172b;
+            border: none;
+            margin: 10px 0;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .semester-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .subject-button {
+            display: inline-block;
+            background-color: #0b172b;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            font-size: 18px;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .subject-button:hover {
+            background-color: #333;
+        }
+
+        .back-button {
+            background-color: #f0f0f0;
+            color: #0b172b;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #e0e0e0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Side Frame -->
+    <div id="sideFrame">
+        <!-- Replace this with the actual path to your logo image -->
+        <img src="image/schoolmaster_logo.png" alt="Schoolmaster Logo">
+        
+        <!-- Side menu buttons -->
+        <button class="button" onclick="window.location.href = 'Subjects.html'">Subjects</button>
+
+        <button class="button" id="extracurricularsButton" onclick="navigateTo('extracurriculars')">Extracurriculars</button>
+        <button class="button" style="color: white; background-color: #0b172b;"onclick="window.location.href = 'Calendar.html'">Calendar</button>
+        <button class="button" id="TutorsButton" onclick="window.location.href = 'Tutors.html'">Tutors</button>
+        
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <button class="back-button" onclick="goBack()">Back</button> <!-- Back Button -->
+
+        <div class="title">Calendar</div>
+
+    <!-- Embed Mathify using an iframe -->
+    <iframe src="https://calendar.google.com/calendar/embed?src=yousefnazmi986%40gmail.com&ctz=America%2FToronto" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <script>
+        // Function to open the subject page (e.g., Math)
+        function openSubject(subject) {
+            if (subject === "math") {
+                // Navigate to the local Page2.html for Math
+                window.location.href = '%3C!DOCTYPE%20html%3E.html';
+            } else {
+                alert("Opening " + subject);
+            }
+        }
+
+        // Function to go back to the previous page in the browser history
+        function goBack() {
+            window.history.back();
+        }
+
+        // Simulate navigation to different tabs (for side menu buttons)
+        function navigateTo(page) {
+            alert("Navigating to " + page);
+        }
+    </script>
+
+</body>
+</html>

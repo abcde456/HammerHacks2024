@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schoolmaster</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            height: 100vh;
+        }
+
+        #sideFrame {
+            background-color: #0b172b;
+            color: white;
+            width: 250px;
+            padding: 20px;
+        }
+
+        #sideFrame img {
+            width: 200px;
+            height: 133px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: block;
+            background-color: #FFFFFF;
+            color: #0b172b;
+            border: none;
+            margin: 10px 0;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .semester-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .subject-button {
+            display: inline-block;
+            background-color: #0b172b;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            font-size: 18px;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .subject-button:hover {
+            background-color: #333;
+        }
+
+        /* New style for the active button */
+        .active-button {
+            background-color: #333;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Side Frame -->
+    <div id="sideFrame">
+        <!-- Replace this with the actual path to your logo image -->
+        <img src="image/schoolmaster_logo.png" alt="Schoolmaster Logo">
+        
+        <!-- Side menu buttons -->
+        <button class="button" style="color: white; background-color: #0b172b;" onclick="window.location.href = 'Subjects.html'">Subjects</button>
+
+        <button class="button" id="extracurricularsButton" onclick="navigateTo('extracurriculars')">Extracurriculars</button>
+        <button class="button" id="tutorsButton" onclick="window.location.href = 'Calendar.html'">Calendar</button>
+        <button class="button" id="tutorsButton" onclick="window.location.href = 'Tutors.html'">Tutors</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="title">Subjects</div>
+
+        <div class="semester-title">Semester 1:</div>
+
+        <!-- Math Button to Open Math Page -->
+        <button class="subject-button" onclick="openSubject('math')">Math</button>
+        <button class="subject-button" onclick="openSubject('science')">Science</button>
+        <button class="subject-button" onclick="openSubject('french')">French</button>
+        <button class="subject-button" onclick="openSubject('tech')">Tech</button>
+
+        <div class="semester-title">Semester 2:</div>
+
+        <button class="subject-button" onclick="openSubject('math')">Math</button>
+        <button class="subject-button" onclick="openSubject('science')">Science</button>
+        <button class="subject-button" onclick="openSubject('french')">French</button>
+        <button class="subject-button" onclick="openSubject('tech')">Tech</button>
+    </div>
+
+    <script>
+        // Function to open the subject page (e.g., Math)
+        function openSubject(subject) {
+            if (subject === "math") {
+                // Navigate to the local Math page
+                window.location.href = 'Math.html';
+            } else {
+                alert("Opening " + subject);
+            }
+        }
+
+        // Simulate navigation to different tabs (for side menu buttons)
+        function navigateTo(page) {
+            alert("Navigating to " + page);
+        }
+
+        // Add 'active-button' class to the Subjects button if on Subjects.html
+        window.onload = function() {
+            var currentPage = window.location.href;
+            var subjectsButton = document.getElementById('subjectsButton');
+
+            // If the current page is Subjects.html, apply the 'active-button' class
+            if (currentPage.includes("Subjects.html")) {
+                subjectsButton.classList.add('active-button');
+            }
+        };
+    </script>
+
+</body>
+</html>
