@@ -114,10 +114,10 @@
 
         <div class="semester-title">Semester 2:</div>
 
-        <button class="subject-button" onclick="openSubject('math')">Math</button>
-        <button class="subject-button" onclick="openSubject('science')">Science</button>
-        <button class="subject-button" onclick="openSubject('french')">French</button>
-        <button class="subject-button" onclick="openSubject('tech')">Tech</button>
+        <button class="subject-button" onclick="openSubject('english')">English</button>
+        <button class="subject-button" onclick="openSubject('history')">History</button>
+        <button class="subject-button" onclick="openSubject('P.E')">P.E</button>
+        <button class="subject-button" onclick="openSubject('drama')">Drama</button>
     </div>
 
     <script>
@@ -133,6 +133,14 @@
                 window.location.href='French.html';
             }else if (subject === "tech"){
                 window.location.href='Tech.html';
+            }else if (subject === "english"){
+                window.location.href='English.html';
+            }else if (subject === "history"){
+                window.location.href='History.html';
+            }else if (subject === "P.E"){
+                window.location.href='pe.html';
+            }else if (subject === "drama"){
+                window.location.href='Drama.html';
             }else{
                 alert("Opening " + subject);
             }
