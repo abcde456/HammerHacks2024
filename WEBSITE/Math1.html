@@ -76,78 +76,75 @@
             background-color: #333;
         }
 
-        /* New style for the active button */
-        .active-button {
-            background-color: #333;
-            color: white;
+        .back-button {
+            background-color: #f0f0f0;
+            color: #0b172b;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #e0e0e0;
         }
 
     </style>
 </head>
 <body>
 
-    <!-- Side Frame -->
+
     <div id="sideFrame">
-        <!-- Replace this with the actual path to your logo image -->
+        
         <img src="image/schoolmaster_logo.png" alt="Schoolmaster Logo">
         
-        <!-- Side menu buttons -->
+
         <button class="button" style="color: white; background-color: #0b172b;" onclick= "window.location.href = 'Subjects.html'">Subjects</button>
         <button class="button" id="tutorsButton" onclick="window.location.href = 'Calendar.html'">Calendar</button>
         <button class="button" id="tutorsButton" onclick="window.location.href = 'Tutors.html'">Tutors</button>
-
     </div>
 
-    <!-- Main Content -->
+    
     <div class="main-content">
-        <div class="title">Subjects</div>
+        <button class="back-button" onclick="goBack()"><p>< Back</p></button> <!-- Back Button -->
 
-        <div class="semester-title">Semester 1:</div>
+        <strong>
+        <div class="title">Math</div>
+        </strong>
 
-        <!-- Math Button to Open Math Page -->
-        <button class="subject-button" onclick="openSubject('math1')">Grade 10 Math</button>
-        <button class="subject-button" onclick="openSubject('science')">Science</button>
-        <button class="subject-button" onclick="openSubject('french')">French</button>
-        <button class="subject-button" onclick="openSubject('tech')">Tech</button>
-
-        <div class="semester-title">Semester 2:</div>
-
-        <button class="subject-button" onclick="openSubject('math2')">Grade 11 Functions</button>
-        <button class="subject-button" onclick="openSubject('History')">History</button>
-        <button class="subject-button" onclick="openSubject('french')">French</button>
-        <button class="subject-button" onclick="openSubject('tech')">Tech</button>
-    </div>
+        <div style="float:left">
+            <center>
+            <strong>
+            <p style="font-size: 50px;margin-bottom: 20px;">GRADE:</p>
+            </strong>
+            <p style="font-size: 50px;margin-bottom: 20px;">93%</p>
+            </center>
+        </div>
+        <div style="float:right">
+            <strong>
+            <p style="font-size: 50px;margin-bottom: 20px;">Assignments:</p>
+            </strong>
+            <ul style="font-size: 30px;margin-bottom: 20px;">
+                <li>Quadratics slideshow</li>
+                <li>Advanced functions homework</li>
+                <li>Addition worksheet</li>
+            </ul>
+        </div>
 
     <script>
-     function openSubject(subject) {
-    if (subject === "math1") {
-        window.location.href = 'Math1.html';
-    } else if (subject === "History") {
-        window.location.href = 'History.html';
-    } else if (subject === "math2") {
-        window.location.href = 'math2.html';
-    } else {
-        // If no subject matches, you can add a fallback or alert
-        alert("Subject not found!");
-    }
-}
+    
 
 
-        // Simulate navigation to different tabs (for side menu buttons)
+        function goBack() {
+            window.history.back();
+        }
+
+
         function navigateTo(page) {
             alert("Navigating to " + page);
         }
-
-        // Add 'active-button' class to the Subjects button if on Subjects.html
-        window.onload = function() {
-            var currentPage = window.location.href;
-            var subjectsButton = document.getElementById('subjectsButton');
-
-            // If the current page is Subjects.html, apply the 'active-button' class
-            if (currentPage.includes("Subjects.html")) {
-                subjectsButton.classList.add('active-button');
-            }
-        };
     </script>
 
 </body>

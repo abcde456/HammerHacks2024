@@ -101,9 +101,10 @@
         <img src="image/schoolmaster_logo.png" alt="Schoolmaster Logo">
         
         <!-- Side menu buttons -->
-        <button class="button" onclick="window.location.href = 'Subjects.html'">Subjects</button>
-        <button class="button" style="color: white; background-color: #0b172b;"onclick="window.location.href = 'Calendar.html'">Calendar</button>
-        <button class="button" id="TutorsButton" onclick="window.location.href = 'Tutors.html'">Tutors</button>
+        <button class="button" onclick= "window.location.href = 'Subjects.html'">Subjects</button>
+        <button class="button" style="color: white; background-color: #0b172b;" onclick="window.location.href = 'Calendar.html'">Calendar</button>
+        <button class="button" id="tutorsButton" onclick="window.location.href = 'Tutors.html'">Tutors</button>
+ 
         
     </div>
 
@@ -111,10 +112,11 @@
     <div class="main-content">
         <button class="back-button" onclick="goBack()">Back</button> <!-- Back Button -->
 
-        <div class="title">Calendar</div>
+        <div style="margin-top: -60px;"  class="title">Calendar</div>
 
-    <!-- Embed Mathify using an iframe -->
-    <iframe src="https://calendar.google.com/calendar/embed?src=yousefnazmi986%40gmail.com&ctz=America%2FToronto" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <center>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=UTC&showPrint=0&src=dGVzdHRlc3QxMTIzMTIzMTIzMTIzMTIzQGdtYWlsLmNvbQ&src=ZW4udXNhLm9mZmljaWFsI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%234285F4" style="border:solid 1px #777" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
+</center>
     <script>
         // Function to open the subject page (e.g., Math)
         function openSubject(subject) {

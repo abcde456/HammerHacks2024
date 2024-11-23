@@ -76,12 +76,6 @@
             background-color: #333;
         }
 
-        /* New style for the active button */
-        .active-button {
-            background-color: #333;
-            color: white;
-        }
-
         .back-button {
             background-color: #f0f0f0;
             color: #0b172b;
@@ -101,54 +95,54 @@
 </head>
 <body>
 
-    <!-- Side Frame -->
+
     <div id="sideFrame">
-        <!-- Replace this with the actual path to your logo image -->
+        
         <img src="image/schoolmaster_logo.png" alt="Schoolmaster Logo">
         
-        <!-- Side menu buttons -->
-        <button class="button" onclick= "window.location.href = 'Subjects.html'">Subjects</button>
-        <button class="button" id="tutorsButton" onclick="window.location.href = 'Calendar.html'">Calendar</button>
-        <button class="button" style="color: white; background-color: #0b172b;" onclick="window.location.href = 'Tutors.html'">Tutors</button>
- 
- </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <button class="back-button" onclick="goBack()">Back</button> <!-- Back Button -->
-
-        <div class="title">Subjects</div>
-
-        <h1>Welcome to Mathify</h1>
-
-        <!-- Embed Mathify using an iframe -->
-        <iframe src="https://tvomathify.com/register/student?_gl=1*6stpe*_gcl_aw*R0NMLjE3MzIzODkxNDYuRUFJYUlRb2JDaE1JLUxLaHVwVHppUU1WcnpVSUJSMDZlaFlnRUFBWUFTQUFFZ0pucWZEX0J3RQ..*_gcl_au*ODQ0ODU5MTAwLjE3MzIzODkxNDU.*_ga*NjE3Mjc3MDcxLjE3MzIzODkxNDY.*_ga_N77Y3TFVJS*MTczMjM4OTE0NS4xLjAuMTczMjM4OTQ5MS42MC4wLjQ4NjM0NDY4OA.." 
-            class="iframe-container" style="height: 750px; width: 1000px;">
-        </iframe>
+        <button class="button" style="color: white; background-color: #0b172b;" onclick= "window.location.href = 'Subjects.html'">Subjects</button>        <button class="button" id="tutorsButton" onclick="window.location.href = 'Calendar.html'">Calendar</button>
+        <button class="button" id="tutorsButton" onclick="window.location.href = 'Tutors.html'">Tutors</button>
     </div>
 
+    
+    <div class="main-content">
+        <button class="back-button" onclick="goBack()"><p>< Back</p></button> <!-- Back Button -->
+
+        <strong>
+        <div class="title">History</div>
+        </strong>
+
+        <div style="float:left">
+            <center>
+            <strong>
+            <p style="font-size: 35px;margin-bottom: 20px;">GRADE:</p>
+            </strong>
+            <p style="font-size: 35px;margin-right: 20px;">18%</p>
+            </center>
+        </div>
+        <div style="float:right">
+            <strong>
+            <p style="font-size: 40px; margin-top: 20px; margin-left: 25px;">Assignments:</p>
+            </strong>
+            <ul style="font-size: 30px;margin-top: -20px;">
+                <li style="color:red">INDIGENOUS Assignments --LATE</li>
+                <li style="color:red">ETHICS IN THE CANADIAN AND WORLD STUDIES Homework -LATE</li>
+            </ul>
+        </div>
+
     <script>
-        // Function to go back to the previous page in the browser history
+    
+
+
         function goBack() {
             window.history.back();
         }
 
-        // Simulate navigation to different tabs (for side menu buttons)
+
         function navigateTo(page) {
             alert("Navigating to " + page);
         }
-
-        // Add 'active-button' class to the Tutors button if on Tutors.html
-        window.onload = function() {
-            // Check the current page URL
-            var currentPage = window.location.href;
-            var tutorsButton = document.getElementById('tutorsButton');
-
-            // If the current page is Tutors.html, apply the 'active-button' class
-            if (currentPage.includes("Tutors.html")) {
-                tutorsButton.classList.add('active-button');
-            }
-        };
     </script>
 
 </body>
