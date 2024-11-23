@@ -95,12 +95,12 @@
 </head>
 <body>
 
-    <!-- Side Frame -->
-    <div id="sideFrame">
-        <!-- Replace this with the actual path to your logo image -->
+
+    <div id="sideFrame", style="height:120%;">
+
         <img src="image/schoolmaster_logo.png" alt="Schoolmaster Logo">
         
-        <!-- Side menu buttons -->
+
         <button class="button" onclick= "window.location.href = 'Subjects.html'">Subjects</button>
         <button class="button" style="color: white; background-color: #0b172b;" onclick="window.location.href = 'Calendar.html'">Calendar</button>
         <button class="button" id="tutorsButton" onclick="window.location.href = 'Tutors.html'">Tutors</button>
@@ -108,32 +108,32 @@
         
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <button class="back-button" onclick="goBack()">Back</button> <!-- Back Button -->
 
+    <div class="main-content">
+        <button class="back-button" onclick="goBack()">Back</button> 
+        <strong>
         <div style="margin-top: -60px;"  class="title">Calendar</div>
+        </strong>
 
     <center>
         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=UTC&showPrint=0&src=dGVzdHRlc3QxMTIzMTIzMTIzMTIzMTIzQGdtYWlsLmNvbQ&src=ZW4udXNhLm9mZmljaWFsI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%234285F4" style="border:solid 1px #777" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
 </center>
     <script>
-        // Function to open the subject page (e.g., Math)
+
         function openSubject(subject) {
             if (subject === "math") {
-                // Navigate to the local Page2.html for Math
+
                 window.location.href = '%3C!DOCTYPE%20html%3E.html';
             } else {
                 alert("Opening " + subject);
             }
         }
 
-        // Function to go back to the previous page in the browser history
         function goBack() {
             window.history.back();
         }
 
-        // Simulate navigation to different tabs (for side menu buttons)
+
         function navigateTo(page) {
             alert("Navigating to " + page);
         }
