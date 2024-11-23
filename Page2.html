@@ -110,20 +110,29 @@
     <div class="main-content">
         <button class="back-button" onclick="goBack()">Back</button> <!-- Back Button -->
 
+        <strong>
         <div class="title">Subjects</div>
+        </strong>
 
-        <div class="semester-title">Semester 1:</div>
+        <div style="float:left;background-color: #f5f5f5;">
+            <strong>
+            <p style="font-size: 50px;margin-bottom: 20px;">GRADE:</p>
+            </strong>
+            <p style="font-size: 50px;margin-bottom: 20px;">93%</p>
+        </div>
+        <div style="float:right">
+            <strong>
+            <p style="font-size: 50px;margin-bottom: 20px;">Assignments:</p>
+            </strong>
+            <ul style="font-size: 50px;margin-bottom: 20px;">
+                <li>Quadratics slideshow</li>
+                <li>Advanced functions homework</li>
+                <li>Addition worksheet</li>
+            </ul>
+        </div>
 
     <script>
-        // Function to open the subject page (e.g., Math)
-        function openSubject(subject) {
-            if (subject === "math") {
-                // Navigate to the local Page2.html for Math
-                window.location.href = 'file:///home/yousef/Downloads/SchoolMaster/HammerHacks2024-main/%3C!DOCTYPE%20html%3E.html';
-            } else {
-                alert("Opening " + subject);
-            }
-        }
+    
 
         // Function to go back to the previous page in the browser history
         function goBack() {
