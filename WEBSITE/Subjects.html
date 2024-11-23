@@ -76,7 +76,7 @@
             background-color: #333;
         }
 
-        /* New style for the active button */
+
         .active-button {
             background-color: #333;
             color: white;
@@ -86,64 +86,66 @@
 </head>
 <body>
 
-    <!-- Side Frame -->
+
     <div id="sideFrame">
-        <!-- Replace this with the actual path to your logo image -->
-        <img src="image/schoolmaster_logo.png" alt="Schoolmaster Logo">
+
+        <center>
+            <img src="image/schoolmaster_logo.png" alt="Schoolmaster Logo">
+        </center>
         
-        <!-- Side menu buttons -->
-        <button class="button" style="color: white; background-color: #0b172b;" onclick= "window.location.href = 'Subjects.html'">Subjects</button>
+
+        <button class="button" style="color: white; background-color: #0b172b;" onclick="window.location.href = 'Subjects.html'">Subjects</button>
         <button class="button" id="tutorsButton" onclick="window.location.href = 'Calendar.html'">Calendar</button>
         <button class="button" id="tutorsButton" onclick="window.location.href = 'Tutors.html'">Tutors</button>
-
     </div>
 
-    <!-- Main Content -->
+
     <div class="main-content">
         <div class="title">Subjects</div>
 
         <div class="semester-title">Semester 1:</div>
 
-        <!-- Math Button to Open Math Page -->
-        <button class="subject-button" onclick="openSubject('math1')">Grade 10 Math</button>
+        <button class="subject-button" onclick="openSubject('math')">Math</button>
         <button class="subject-button" onclick="openSubject('science')">Science</button>
         <button class="subject-button" onclick="openSubject('french')">French</button>
         <button class="subject-button" onclick="openSubject('tech')">Tech</button>
 
         <div class="semester-title">Semester 2:</div>
 
-        <button class="subject-button" onclick="openSubject('math2')">Grade 11 Functions</button>
-        <button class="subject-button" onclick="openSubject('History')">History</button>
+        <button class="subject-button" onclick="openSubject('math')">Math</button>
+        <button class="subject-button" onclick="openSubject('science')">Science</button>
         <button class="subject-button" onclick="openSubject('french')">French</button>
         <button class="subject-button" onclick="openSubject('tech')">Tech</button>
     </div>
 
     <script>
-     function openSubject(subject) {
-    if (subject === "math1") {
-        window.location.href = 'Math1.html';
-    } else if (subject === "History") {
-        window.location.href = 'History.html';
-    } else if (subject === "math2") {
-        window.location.href = 'math2.html';
-    } else {
-        // If no subject matches, you can add a fallback or alert
-        alert("Subject not found!");
-    }
-}
+ 
+        function openSubject(subject) {
+            if (subject === "math") {
+
+                window.location.href = 'Math.html';
+            }else if(subject === "science"){ 
+
+                window.location.href= 'Science.html';
+            }else if(subject === "french"){
+                window.location.href='French.html';
+            }else if (subject === "tech"){
+                window.location.href='Tech.html';
+            }else{
+                alert("Opening " + subject);
+            }
+        }
 
 
-        // Simulate navigation to different tabs (for side menu buttons)
         function navigateTo(page) {
             alert("Navigating to " + page);
         }
 
-        // Add 'active-button' class to the Subjects button if on Subjects.html
+
         window.onload = function() {
             var currentPage = window.location.href;
             var subjectsButton = document.getElementById('subjectsButton');
 
-            // If the current page is Subjects.html, apply the 'active-button' class
             if (currentPage.includes("Subjects.html")) {
                 subjectsButton.classList.add('active-button');
             }
