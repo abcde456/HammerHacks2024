@@ -76,6 +76,21 @@
             background-color: #333;
         }
 
+        .back-button {
+            background-color: #f0f0f0;
+            color: #0b172b;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #e0e0e0;
+        }
+
     </style>
 </head>
 <body>
@@ -86,40 +101,33 @@
         <img src="image/schoolmaster_logo.png" alt="Schoolmaster Logo">
         
         <!-- Side menu buttons -->
-        <button class="button" onclick="navigateTo('extracurriculars')">Extracurriculars</button>
-        <button class="button" onclick="navigateTo('tutors')">Tutors</button>
-        <button class="button" onclick="navigateTo('e')">e</button>
+        <button class="button" onclick="navigateTo('extracurriculars')">Subjects</button>
+        <button class="button" onclick="navigateTo('tutors')">Extracurriculars</button>
+        <button class="button" onclick="navigateTo('e')">Tutors</button>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
+        <button class="back-button" onclick="goBack()">Back</button> <!-- Back Button -->
+
         <div class="title">Subjects</div>
 
         <div class="semester-title">Semester 1:</div>
-
-        <!-- Math Button to Open Page2.html -->
-        <button class="subject-button" onclick="openSubject('math')">Math</button>
-        <button class="subject-button" onclick="openSubject('science')">Science</button>
-        <button class="subject-button" onclick="openSubject('french')">French</button>
-        <button class="subject-button" onclick="openSubject('tech')">Tech</button>
-
-        <div class="semester-title">Semester 2:</div>
-
-        <button class="subject-button" onclick="openSubject('math')">Math</button>
-        <button class="subject-button" onclick="openSubject('science')">Science</button>
-        <button class="subject-button" onclick="openSubject('french')">French</button>
-        <button class="subject-button" onclick="openSubject('tech')">Tech</button>
-    </div>
 
     <script>
         // Function to open the subject page (e.g., Math)
         function openSubject(subject) {
             if (subject === "math") {
                 // Navigate to the local Page2.html for Math
-                window.location.href = 'file:///home/yousef/Downloads/SchoolMaster/HammerHacks2024-main/Page2.html';
+                window.location.href = 'file:///home/yousef/Downloads/SchoolMaster/HammerHacks2024-main/%3C!DOCTYPE%20html%3E.html';
             } else {
                 alert("Opening " + subject);
             }
+        }
+
+        // Function to go back to the previous page in the browser history
+        function goBack() {
+            window.history.back();
         }
 
         // Simulate navigation to different tabs (for side menu buttons)
