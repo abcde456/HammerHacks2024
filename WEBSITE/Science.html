@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schoolmaster</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            height: 100vh;
+        }
+
+        #sideFrame {
+            background-color: #0b172b;
+            color: white;
+            width: 250px;
+            padding: 20px;
+        }
+
+        #sideFrame img {
+            width: 200px;
+            height: 133px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: block;
+            background-color: #FFFFFF;
+            color: #0b172b;
+            border: none;
+            margin: 10px 0;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .semester-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .subject-button {
+            display: inline-block;
+            background-color: #0b172b;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            font-size: 18px;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .subject-button:hover {
+            background-color: #333;
+        }
+
+        .back-button {
+            background-color: #f0f0f0;
+            color: #0b172b;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #e0e0e0;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div id="sideFrame">
+        
+        <center>
+            <img src="image/schoolmaster_logo.png" alt="Schoolmaster Logo">
+        </center>
+        
+
+        <button class="button" style="color: white; background-color: #0b172b;" onclick= "window.location.href = 'Subjects.html'">Subjects</button>
+        <button class="button" id="tutorsButton" onclick="window.location.href = 'Calendar.html'">Calendar</button>
+        <button class="button" id="tutorsButton" onclick="window.location.href = 'Tutors.html'">Tutors</button>
+    </div>
+
+    
+    <div class="main-content">
+        <button class="back-button" onclick="goBack()"><p>< Back</p></button>
+
+        <strong>
+        <div class="title">Science - Mr. Tozer</div>
+        </strong>
+
+        <div style="float:left">
+            <center>
+            <strong>
+            <p style="font-size: 50px;margin-bottom: 20px;">GRADE:</p>
+            </strong>
+            <p style="font-size: 50px;margin-bottom: 20px;">56%</p>
+            </center>
+        </div>
+        <div style="float:right">
+            <strong>
+            <p style="font-size: 50px;margin-bottom: 20px;">Assignments:</p>
+            </strong>
+            <ul style="font-size: 30px;margin-bottom: 20px;">
+                <li>Chemistry lab report - Due Nov 26</li>
+                <li style="color:#ff0000">Cancer slideshow --LATE</li>
+            </ul>
+        </div>
+
+    <script>
+    
+
+
+        function goBack() {
+            window.history.back();
+        }
+
+
+        function navigateTo(page) {
+            alert("Navigating to " + page);
+        }
+    </script>
+
+</body>
+</html>
